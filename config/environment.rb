@@ -1,6 +1,7 @@
 ENV['SINATRA_ENV'] ||= "development"
-
+require 'pry'
 require 'bundler/setup'
+require_relative '../app/helpers/helpers.rb'
 Bundler.require(:default, ENV['SINATRA_ENV'])
 
 ActiveRecord::Base.establish_connection(
